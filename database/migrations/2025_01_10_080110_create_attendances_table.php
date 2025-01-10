@@ -17,7 +17,7 @@ return new class extends Migration
             $table->uuid("day_id")->nullable();
             $table->uuid("shift_id");
             $table->time("clock_in")->nullable();
-            $table->string("status")->default('Present');
+            $table->string("status");
             $table->timestamps();
 
         });

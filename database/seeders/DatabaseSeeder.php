@@ -14,14 +14,14 @@ class DatabaseSeeder extends Seeder
         // Run the factories or direct seeding
         $this->call([
             // UsersTableSeeder::class,
-            EmployeesTableSeeder::class,
-            ShiftsTableSeeder::class,
-            AttendanceTableSeeder::class,
-            LeavesTableSeeder::class,
-            HolidaysTableSeeder::class,
-            OvertimeTableSeeder::class,
-            TimecheckTableSeeder::class,
-            DayTableSeeder::class,
+            // EmployeeSeeder::class,
+            ShiftSeeder::class,
+            LeaveSeeder::class,
+            HolidaySeeder::class,
+            OvertimeSeeder::class,
+            TimeCheckSeeder::class,
+            DaySeeder::class,
+            AttendanceSeeder::class,
         ]);
     }
 }
