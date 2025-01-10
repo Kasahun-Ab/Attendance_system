@@ -8,7 +8,7 @@ use App\Http\Controllers\LeaveController;
 use App\Http\Controllers\HolidayController;
 use App\Http\Controllers\OvertimeController;
 use App\Http\Controllers\TimecheckController;
-
+use App\Http\Controllers\DayController; // Ensure DayController is imported
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -27,28 +27,28 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 // Employee Routes
-Route::resource('employees', EmployeeController::class);
+Route::resource('employees', EmployeeController::class)->middleware('auth');
 
 // Shift Routes
-Route::resource('shifts', ShiftController::class);
+Route::resource('shifts', ShiftController::class)->middleware('auth');
 
 // Attendance Routes
-Route::resource('attendances', AttendanceController::class);
+Route::resource('attendances', AttendanceController::class)->middleware('auth');
 
 // Leave Routes
-Route::resource('leaves', LeaveController::class);
+Route::resource('leaves', LeaveController::class)->middleware('auth');
 
 // Holiday Routes
-Route::resource('holidays', HolidayController::class);
+Route::resource('holidays', HolidayController::class)->middleware('auth');
 
 // Overtime Routes
-Route::resource('overtimes', OvertimeController::class);
+Route::resource('overtimes', OvertimeController::class)->middleware('auth');
 
 // Timecheck Routes
-Route::resource('timechecks', TimecheckController::class);
+Route::resource('timechecks', TimecheckController::class)->middleware('auth');
 
 // Day Routes
-Route::resource('days', DayController::class);
+Route::resource('days', DayController::class)->middleware('auth');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -56,4 +56,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

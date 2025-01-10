@@ -9,7 +9,7 @@ class OvertimeSeeder extends Seeder
 {
     public function run()
     {
-        DB::table('overtime')->insert([
+        DB::table('overtimes')->insert([
             [
                 'id' => 'overtime-id-1',
                 'employee_id' => 'unique-id-1',

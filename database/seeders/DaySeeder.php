@@ -9,7 +9,7 @@ class DaySeeder extends Seeder
 {
     public function run()
     {
-        DB::table('day')->insert([
+        DB::table('days')->insert([
             [
                 'id' => 'day-id-1',
                 'name_day' => 'Mon',

@@ -11,16 +11,17 @@ class EmployeeController extends Controller
     // Show a list of all employees
     public function index()
     {
-        $employees = Employee::all();
-        return Inertia::render('Employees/Index', [
-            'employees' => $employees,
-        ]);
+        return Inertia::render('Employee');
+        // $employees = Employee::all();
+        // return Inertia::render('Employees/Index', [
+        //     'employees' => $employees,
+        // ]);
     }
 
     // Show the form to create a new employee
     public function create()
     {
-        return Inertia::render('Employees/Create');
+        return Inertia::render('Employee');
     }
 
    

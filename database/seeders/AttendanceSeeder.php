@@ -9,7 +9,7 @@ class AttendanceSeeder extends Seeder
 {
     public function run()
     {
-        DB::table('attendance')->insert([
+        DB::table('attendances')->insert([
             [
                 'id' => 'attendance-id-1',
                 'employee_id' => 'unique-id-1',
