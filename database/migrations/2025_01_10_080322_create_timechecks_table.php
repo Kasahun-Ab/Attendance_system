@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('timechecks', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->time('monrning_start_time')->nullable();
-            $table->time('afternon_start_time')->nullable();
-            $table->timestamps(0);
+            $table->time('monrning_start_time');
+            $table->time('afternon_start_time');
+            $table->timestamps();
         });
     }
 

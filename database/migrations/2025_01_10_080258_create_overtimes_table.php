@@ -15,9 +15,9 @@ return new class extends Migration
             $table->uuid('id')->primary();
             $table->uuid('employee_id');
             $table->date('date');
-            $table->decimal('overtime_hours', 5, 2);
-            $table->string('reason', 255);
-            $table->timestamps(0);
+            $table->decimal('overtime_hours');
+            $table->string('reason');
+            $table->timestamps();
         });
     }
 

@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class EmployeeController extends Controller
 {
-    // Show a list of all employees
+
     public function index()
     {
         return Inertia::render('Employee');
@@ -23,6 +23,7 @@ class EmployeeController extends Controller
     {
         return Inertia::render('Employee');
     }
+
 
    
     public function store(Request $request)
@@ -80,4 +81,5 @@ class EmployeeController extends Controller
         $employee->delete();
         return redirect()->route('employees.index')->with('success', 'Employee deleted successfully.');
     }
+    //this id my new  github
 }
